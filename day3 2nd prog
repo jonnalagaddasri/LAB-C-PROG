@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+  int *p,*q;
+  int n1,n2;
+  p=&n1;
+  q=&n2;
+  printf("Enter two numbers:\n");
+  scanf("%d %d",p,q);
+  int max=*p>*q?*p:*q;
+  printf("%d is maximum number",max);
+}
