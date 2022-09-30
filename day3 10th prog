@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+long decimalToBinary(int decinum)
+{
+    long binum = 0;
+    int rem, temp = 1;
+
+    while (decinum!=0)
+    {
+        rem = decinum%2;
+        decinum = decinum / 2;
+        binum = binum + rem*temp;
+        temp = temp * 10;
+    }
+    return binum;
+}
+
+int main()
+{
+    int decinum;
+    printf("Enter a Decimal Number: ");
+    scanf("%d", &decinum);
+    printf("Equivalent Binary Number is: %ld", decimalToBinary(decinum));
+    return 0;
+}
