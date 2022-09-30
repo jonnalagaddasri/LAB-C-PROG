@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main(){
+    char g;
+    printf("Enter the grade of the grade:");
+    scanf(" %c",&g);
+    int sal;
+    printf("\nEnter the employee salary:");
+    scanf("%d",&sal);
+    printf("%d\n",sal);
+    float bon;
+    if(g=='A'&&sal<10000&&sal>0){
+        bon=(sal*7)/100;
+    }
+    else if(g=='A'&&sal>=10000){
+        bon=(sal*5)/100;
+    }
+    else if(g=='B'&&sal<10000&&sal>0){
+        bon=(sal*12)/100;
+    }
+    else if(g=='B'&&sal>10000){
+        bon=(sal*10)/100;
+    }
+    printf("Bonus:%.1f\n",bon);
+    float tot=bon+sal;
+    printf("Total to be paid:%.1f",tot);
+    
+}
